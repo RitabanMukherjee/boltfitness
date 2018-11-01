@@ -31,8 +31,8 @@
       margin-bottom: 30px;
   }  
   .jumbotron {
-      background-color: #fff;
-      color: #fff;
+      background-color: rgb(250, 128, 15);
+      color: rgb(8, 8, 8);
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
@@ -211,6 +211,19 @@
 }
 
 
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 
 
 
@@ -292,13 +305,13 @@
 <h2 id="demo08"></h2>
 <div class="hover08 column">
   <div class="item">
-    <figure><img src="9.jpg" class="col-sm-4" alt="Adult Fitness" style="height:300px;width:33%" /></figure>
+    <figure><img src="9.jpg" class="col-sm-4 img-fluid" alt="Adult Fitness" style="height:auto;width:33%" /></figure>
   </div>
   <div class="item">
-    <figure><img src="10.jpg" class="col-sm-4" alt="Sports Performance Training" style="height:300px;width:34%"/></figure>
+    <figure><img src="10.jpg" class="col-sm-4 img-fluid" alt="Sports Performance Training" style="height:auto;width:34%"/></figure>
   </div>
   <div class="item">
-    <figure><img src="7.jpg" class="col-sm-4" alt="Nutrition Coaching" style="height:300px;width:33%"/></figure>
+    <figure><img src="7.jpg" class="col-sm-4 img-fluid" alt="Nutrition Coaching" style="height:auto;width:33%"/></figure>
   </div>
 </div>
 </div>
@@ -498,9 +511,9 @@ To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
-
+<div class="map-responsive">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.7920337047817!2d-74.6888996845927!3d40.78858597932354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c39961fe54e169%3A0xafc573865ee9626a!2sBOLT+Fitness+%26+Performance+Training!5e0!3m2!1sen!2sus!4v1538025903799" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+</div>
 
 
 

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Abstract</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">
+        
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <style>
+            body {
+                font: 400 15px Lato, sans-serif;
+                line-height: 1.8;
+                color: #818181;
+            }
+            h2 {
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #303030;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+            h4 {
+                font-size: 19px;
+                line-height: 1.375em;
+                color: #303030;
+                font-weight: 400;
+                margin-bottom: 30px;
+            }  
+            .jumbotron {
+                background-color: #f4511e;
+                color: #fff;
+                padding: 100px 25px;
+                font-family: Montserrat, sans-serif;
+            }
+            .container-fluid {
+                padding: 60px 50px;
+            }
+            .bg-grey {
+                background-color: #f6f6f6;
+            }
+            .logo-small {
+                color: #f4511e;
+                font-size: 50px;
+            }
+            .logo {
+                color: #f4511e;
+                font-size: 200px;
+            }
+            .thumbnail {
+                padding: 0 0 15px 0;
+                border: none;
+                border-radius: 0;
+            }
+            .thumbnail img {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 10px;
+            }
+            .carousel-control.right, .carousel-control.left {
+                background-image: none;
+                color: #f4511e;
+            }
+            .carousel-indicators li {
+                border-color: #f4511e;
+            }
+            .carousel-indicators li.active {
+                background-color: #f4511e;
+            }
+            .item h4 {
+                font-size: 19px;
+                line-height: 1.375em;
+                font-weight: 400;
+                font-style: italic;
+                margin: 70px 0;
+            }
+            .item span {
+                font-style: normal;
+            }
+            .panel {
+                border: 1px solid #f4511e; 
+                border-radius:0 !important;
+                transition: box-shadow 0.5s;
+            }
+            .panel:hover {
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+            .panel-footer .btn:hover {
+                border: 1px solid #f4511e;
+                background-color: #fff !important;
+                color: #f4511e;
+            }
+            .panel-heading {
+                color: #fff !important;
+                background-color: #f4511e !important;
+                padding: 25px;
+                border-bottom: 1px solid transparent;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            .panel-footer {
+                background-color: white !important;
+            }
+            .panel-footer h3 {
+                font-size: 32px;
+            }
+            .panel-footer h4 {
+                color: #aaa;
+                font-size: 14px;
+            }
+            .panel-footer .btn {
+                margin: 15px 0;
+                background-color: #f4511e;
+                color: #fff;
+            }
+            .navbar {
+                margin-bottom: 0;
+                background-color: #f4511e;
+                z-index: 9999;
+                border: 0;
+                font-size: 12px !important;
+                line-height: 1.42857143 !important;
+                letter-spacing: 4px;
+                border-radius: 0;
+                font-family: Montserrat, sans-serif;
+            }
+            .navbar li a, .navbar .navbar-brand {
+                color: #fff !important;
+            }
+            .navbar-nav li a:hover, .navbar-nav li.active a {
+                color: #f4511e !important;
+                background-color: #fff !important;
+            }
+            .navbar-default .navbar-toggle {
+                border-color: transparent;
+                color: #fff !important;
+            }
+            footer .glyphicon {
+                font-size: 20px;
+                margin-bottom: 20px;
+                color: #f4511e;
+            }
+            .slideanim {visibility:hidden;}
+            .slide {
+                animation-name: slide;
+                -webkit-animation-name: slide;
+                animation-duration: 1s;
+                -webkit-animation-duration: 1s;
+                visibility: visible;
+            }
+            @keyframes slide {
+              0% {
+                opacity: 0;
+                transform: translateY(70%);
+              } 
+              100% {
+                opacity: 1;
+                transform: translateY(0%);
+              }
+            }
+            @-webkit-keyframes slide {
+              0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+              } 
+              100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+              }
+            }
+            @media screen and (max-width: 768px) {
+              .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+              }
+              .btn-lg {
+                  width: 100%;
+                  margin-bottom: 35px;
+              }
+            }
+            @media screen and (max-width: 480px) {
+              .logo {
+                  font-size: 150px;
+              }
+            }
+          
+        
+          
+          
+          
+            </style>
+
+</head>
+
+<body id="mypage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- header 
+   ================================================== 
+   <header class="short-header">   
+
+   	<div class="gradient-block"></div>	
+
+   	<div class="row header-content">
+
+   		<div class="logo">
+	         <a href="index.html">Author</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation sf-menu">
+					<li class="current"><a href="index.html" title="">Home</a></li>									
+					<li class="has-children">
+						<a href="category.html" title="">Categories</a>
+						<ul class="sub-menu">
+			            <li><a href="category.html">Wordpress</a></li>
+			            <li><a href="category.html">HTML</a></li>
+			            <li><a href="category.html">Photography</a></li>
+			            <li><a href="category.html">UI</a></li>
+			            <li><a href="category.html">Mockups</a></li>
+			            <li><a href="category.html">Branding</a></li>
+			         </ul>
+					</li>
+					<li class="has-children">
+						<a href="single-standard.html" title="">Blog</a>
+						<ul class="sub-menu">
+			            <li><a href="single-video.html">Video Post</a></li>
+			            <li><a href="single-audio.html">Audio Post</a></li>
+			            <li><a href="single-gallery.html">Gallery Post</a></li>
+			            <li><a href="single-standard.html">Standard Post</a></li>
+			         </ul>
+					</li>
+					<li><a href="style-guide.html" title="">Styles</a></li>
+					<li><a href="about.html" title="">About</a></li>	
+					<li><a href="contact.html" title="">Contact</a></li>										
+				</ul>
+			</nav> end main-nav-wrap -->
+
+            <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="../index.html"><img src="../Final_Bolt_logo_tagline-325-100.jpg" class="img-responsive" style="height:35px" alt="Brand"></a>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="../index.html">PROGRAMS</a></li>
+                          <li><a href="../index.html">ABOUT</a></li>
+                          <li><a href="../index.html">PORTFOLIO</a></li>
+                          <li><a href="../index.html">SCHEDULE</a></li>
+                          <li><a href="../index.html">PRICING</a></li>
+                          <li><a href="../index.html">CONTACT</a></li>
+                          <li><a href="#bricks">BLOG</a></li>
+                         
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+			
+   		
+   	</div>     		
+   	
+   </header>  
+
+
+   <!-- masonry
+   ================================================== -->
+   <section id="bricks">
+
+   	<div class="row masonry">
+
+   		<!-- brick-wrapper -->
+         <div class="bricks-wrapper">
+
+         	<div class="grid-sizer"></div>
+
+         	<div class="brick entry featured-grid animate-this">
+         		<div class="entry-content">
+         			<div id="featured-post-slider" class="flexslider">
+			   			<ul class="slides">
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/thumbs/featured/featured-1.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+								   		<ul class="entry-meta">
+												<li>September 06, 2016</li> 
+												<li><a href="#" >Naruto Uzumaki</a></li>				
+											</ul>	
+
+								   		<h1 class="slide-title"><a href="single-standard.html" title="">Minimalism Never Goes Out of Style</a></h1> 
+								   	</div> 				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/thumbs/featured/featured-2.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+								   		<ul class="entry-meta">
+												<li>August 29, 2016</li>
+												<li><a href="#">Sasuke Uchiha</a></li>					
+											</ul>	
+
+								   		<h1 class="slide-title"><a href="single-standard.html" title="">Enhancing Your Designs with Negative Space</a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/thumbs/featured/featured-3.jpg');;"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+								   		<ul class="entry-meta">
+												<li>August 27, 2016</li>
+												<li><a href="#" class="author">Naruto Uzumaki</a></li>					
+											</ul>	
+
+								   		<h1 class="slide-title"><a href="single-standard.html" title="">Music Album Cover Designs for Inspiration</a></h1>
+						   			</div>
+
+				   				</div>
+				   			</li> <!-- end slide -->
+
+				   		</ul> <!-- end slides -->
+				   	</div> <!-- end featured-post-slider -->        			
+         		</div> <!-- end entry content -->         		
+         	</div>
+
+         	<article class="brick entry format-standard animate-this">
+
+               <div class="entry-thumb">
+                  <a href="single-standard.html" class="thumb-link">
+	                  <img src="images/thumbs/diagonal-building.jpg" alt="building">             
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Design</a> 
+               				<a href="#">Photography</a>               				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-standard.html">Just a Standard Format Post.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+
+        		</article> <!-- end article -->
+
+            <article class="brick entry format-standard animate-this">
+
+               <div class="entry-thumb">
+                  <a href="single-standard.html" class="thumb-link">
+	                  <img src="images/thumbs/ferris-wheel.jpg" alt="ferris wheel">                   
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Design</a> 
+               				<a href="#">UI</a>                			
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-standard.html">This Is Another Standard Format Post.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+            <!-- format audio here -->
+            <article class="brick entry format-audio animate-this">
+
+               <div class="entry-thumb">
+                  <a href="single-audio.html" class="thumb-link">
+	                  <img src="images/thumbs/concert.jpg" alt="concert">                      
+                  </a>
+
+                  <div class="audio-wrap">
+                  	<audio id="player" src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" width="100%" height="42" controls="controls"></audio>                  	
+                  </div>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Design</a> 
+               				<a href="#">Music</a>                				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-audio.html">This Is a Audio Format Post.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- /article -->
+
+         	<article class="brick entry format-quote animate-this" >
+
+               <div class="entry-thumb">                  
+	               <blockquote>
+	                 	<p>Good design is making something intelligible and memorable. Great design is making something memorable and meaningful.</p>
+
+	                 	<cite>Dieter Rams</cite> 
+	               </blockquote>	          
+               </div>   
+
+        		</article> <!-- end article -->
+
+         	<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="single-standard.html" class="thumb-link">
+	                  <img src="images/thumbs/shutterbug.jpg" alt="Shutterbug">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Photography</a> 
+               				<a href="#">html</a>                				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-standard.html">Photography Skills Can Improve Your Graphic Design.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+            <article class="brick entry animate-this" >
+
+               <div class="entry-thumb">
+                  <a href="single-standard.html" class="thumb-link">
+	                  <img src="images/thumbs/usaf-rocket.jpg" alt="USAF rocket">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Branding</a> 
+               				<a href="#">Mockup</a>               				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-standard.html">The 10 Golden Rules of Clean Simple Design.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->        	
+
+        		<article class="brick entry format-gallery group animate-this">
+
+               <div class="entry-thumb">
+
+                  <div class="post-slider flexslider">
+							<ul class="slides">
+								<li>
+									<img src="images/thumbs/gallery/work1.jpg"> 
+								</li>
+								<li>
+									<img src="images/thumbs/gallery/work2.jpg"> 
+								</li>
+								<li>
+									<img src="images/thumbs/gallery/work3.jpg"> 
+								</li>
+							</ul>							
+						</div> 
+
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Branding</a> 
+               				<a href="#">Wordpress</a>               				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-gallery.html">Workspace Design Trends and Ideas.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry format-link animate-this">
+
+               <div class="entry-thumb">
+                  <div class="link-wrap">
+	                 	<p>Looking for affordable &amp; reliable web hosting? We recommend Dreamhost.</p>
+	                 	<cite>
+	                 		<a target="_blank" href="http://www.dreamhost.com/r.cgi?287326">http://www.dreamhost.com</a>
+	                 	</cite>
+	               </div>	
+               </div>               
+               
+        		</article> <!-- end article -->
+
+
+         	<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="single-standard.html" class="thumb-link">
+	                  <img src="images/thumbs/diagonal-pattern.jpg" alt="Pattern">              
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Design</a> 
+               				<a href="#">UI</a>                			
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-standard.html">You Can See Patterns Everywhere.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry format-video animate-this">
+
+               <div class="entry-thumb video-image">
+                  <a href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39" data-lity>
+	                  <img src="images/thumbs/ottawa-bokeh.jpg" alt="bokeh">                   
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Design</a> 
+               				<a href="#">Branding</a>               			
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-video.html">This Is a Video Post Format.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="single-standard.html" class="thumb-link">
+	                  <img src="images/thumbs/lighthouse.jpg" alt="Lighthouse">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Photography</a> 
+               				<a href="#">Design</a>
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-standard.html">Breathtaking Photos of Lighthouses.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="single-standard.html" class="thumb-link">
+	                  <img src="images/thumbs/liberty.jpg" alt="Liberty">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Branding</a> 
+               				<a href="#">html</a>                	
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="single-standard.html">Designing With Black and White.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+         </div> <!-- end brick-wrapper --> 
+
+   	</div> <!-- end row -->
+
+   	<div class="row">
+   		
+   		<nav class="pagination">
+		      <span class="page-numbers prev inactive">Prev</span>
+		   	<span class="page-numbers current">1</span>
+		   	<a href="#" class="page-numbers">2</a>
+		      <a href="#" class="page-numbers">3</a>
+		      <a href="#" class="page-numbers">4</a>
+		      <a href="#" class="page-numbers">5</a>
+		      <a href="#" class="page-numbers">6</a>
+		      <a href="#" class="page-numbers">7</a>
+		      <a href="#" class="page-numbers">8</a>
+		      <a href="#" class="page-numbers">9</a>
+		   	<a href="#" class="page-numbers next">Next</a>
+	      </nav>
+
+   	</div>
+
+   </section> <!-- end bricks -->
+
+   
+   <!-- footer
+   ================================================== -->
+   <footer class="container-fluid text-center">
+        <a href="#mypage" title="To Top">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Made by DesignDash LLC</a></p>
+      </footer>
+      
+      <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#mypage']").on('click', function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Store hash
+            var hash = this.hash;
+      
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function(){
+         
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+        
+        $(window).scroll(function() {
+          $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
+      
+            var winTop = $(window).scrollTop();
+              if (pos < winTop + 600) {
+                $(this).addClass("slide");
+              }
+          });
+        });
+      })
+      </script>
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/jquery.appear.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
