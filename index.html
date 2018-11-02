@@ -17,9 +17,9 @@
       color: #818181;
   }
   h2 {
-      font-size: 24px;
+      font-size: 23px;
       text-transform: uppercase;
-      color: #000;
+      color: rgb(8, 0, 0);
       font-weight: 600;
       margin-bottom: 30px;
   }
@@ -31,11 +31,29 @@
       margin-bottom: 30px;
   }  
   .jumbotron {
-      background-color: rgb(250, 128, 15);
-      color: rgb(8, 8, 8);
+      /*background-repeat: no-repeat;*/
+      color: rgb(0, 0, 10);
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
+
+ 
+ div.background {
+  background-image: url("11.jpeg");
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  overflow: hidden;
+}
+
+
+
   .container-fluid {
       padding: 60px 50px;
   }
@@ -200,7 +218,9 @@
 
 
 
-
+.hover08 {
+  overflow:hidden;
+}
 
 
 
@@ -231,7 +251,9 @@
     position:absolute;
 }
 
-
+.bolt_image{
+  overflow:hidden;
+}
 
   </style>
 </head>
@@ -263,9 +285,13 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <h1>BOLT FITNESS & PERFORMANCE TRAINING</h1> 
-  <h2>We specialize in success</h2> 
   
+  <div class="background">
+    <div class="transbox">
+      <h1><strong></strong>BOLT FITNESS & PERFORMANCE TRAINING</h1> 
+      <h2><strong></strong>We specialize in success</h2> 
+    </div>
+  </div>
 
 
 
@@ -312,13 +338,13 @@
 <div class="text-center">
 <div class="hover08 column">
   <div class="item">
-    <figure><img src="9.jpg" class="col-sm-4 img-fluid" alt="Adult Fitness"   style="height:300px"/></figure>
+    <figure><img src="16.jpg" class="col-sm-4 img-fluid" alt="Adult Fitness"   style="height:250px"/></figure>
   </div>
   <div class="item">
-    <figure><img src="10.jpg" class="col-sm-4 img-fluid" alt="Sports Performance Training"  style="height:300px"/></figure>
+    <figure><img src="14.jpg" class="col-sm-4 img-fluid" alt="Sports Performance Training"  style="height:250px"/></figure>
   </div>
   <div class="item">
-    <figure><img src="7.jpg" class="col-sm-4 img-fluid" alt="Nutrition Coaching" style="height:300px"/></figure>
+    <figure><img src="15.jpg" class="col-sm-4 img-fluid" alt="Nutrition Coaching" style="height:250px"/></figure>
   </div>
 </div>
 </div>
@@ -338,9 +364,11 @@
     
       <br><button class="btn btn-default btn-lg">21 DAY JUMP START</button>
     </div>
+    <div class="bolt_image">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+      <span><img src="17.jpeg" alt="Smiley face" height="400" width="400"></span>
     </div>
+  </div>
   </div>
 </div>
 
@@ -393,13 +421,13 @@
   <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      <span class="glyphicon glyphicon-calendar logo slideanim"></span>
     </div>
     <div class="col-sm-8">
       <h2>Schedule</h2><br>
       <h4><strong></strong> TO BOOK A SWEAT CLASS OR SEMI-PRIVATE TRAINING SESSION, PLEASE CLICK <a href="https://clients.mindbodyonline.com/classic/mainclass?studioid=561455&tg=&vt=&lvl=&stype=-7&view=day&trn=0&page=&catid=&prodid=&date=9%2f11%2f2018&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1">HERE</a></h4><br>
       <h4><strong></strong> TO BOOK A CONSULTATION, STRATEGY SESSION, OR PERSONAL TRAINING SESSION, PLEASE CONTACT US AT</h4>
-      <h4>mikebaker@boltfitperform.com</h4>
+      <h4 style="text-align:center">mikebaker@boltfitperform.com</h4>
       <h4>OR</h4>
       <h4>973-945-6894</h4>
     </div>
