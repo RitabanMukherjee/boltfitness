@@ -136,9 +136,11 @@ div.transbox {
       background-color: #f4511e;
       color: #fff;
   }
-  .navbar {
+  .navbar
+  {
+      color: black !important;
       margin-bottom: 0;
-      background-color: #f4511e;
+      background-color: white;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -148,10 +150,21 @@ div.transbox {
       font-family: Montserrat, sans-serif;
   }
   .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
+      color: rgb(252, 6, 6) !important;
+  }
+.navbar li a:hover {
+      color: black !important;
+  }
+  .navbar-header a img
+  {
+     margin-top: -7px;     
+  }
+  .container div ul li
+  {
+      color: black;  
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
+      color: black !important;
       background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
@@ -213,8 +226,10 @@ div.transbox {
     }
   }
 
-
-
+#nav-dropdown-links
+{
+    color: black;    
+}
 
 
 
@@ -225,7 +240,7 @@ div.transbox {
 
 
 
-.hover08 figure img {
+/*.hover08 figure img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: .3s ease-in-out;
@@ -234,7 +249,7 @@ div.transbox {
 .hover08 figure:hover img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
-}
+}*/
 
 
 .map-responsive{
@@ -255,6 +270,37 @@ div.transbox {
   overflow:hidden;
 }
 
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.texts {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+#imge {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.item:hover .imge {
+  opacity: 0.3;
+}
+
+.item:hover .middle {
+  opacity: 1;
+}
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -307,7 +353,7 @@ div.transbox {
       <a class="navbar-brand" href="#myPage"><img src="Final_Bolt_logo_tagline-325-100.jpg" class="img-responsive" style="height:35px" alt="Brand"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right text-muted">
         <li><a href="#programs">PROGRAMS</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#portfolio">PORTFOLIO</a></li>
@@ -371,17 +417,26 @@ div.transbox {
 
 <!-- Container (Programs Section) -->
 <div id="programs" class="container-fluid text-center bg-grey">
-<h2 id="demo08"></h2>
+
 <div class="text-center">
 <div class="hover08 column">
   <div class="item">
-    <figure><img src="16.jpg" class="col-sm-4 img-fluid" alt="Adult Fitness"   style="height:250px"/></figure>
+    <figure><img src="16.jpg" class="col-sm-4 img-fluid" id="imge" alt="Adult Fitness"   style="height:250px"/></figure>
+    <div class="middle">
+        <div class="texts">Adult Fitness</div>
+      </div>
   </div>
   <div class="item">
-    <figure><img src="14.jpg" class="col-sm-4 img-fluid" alt="Sports Performance Training"  style="height:250px"/></figure>
+    <figure><img src="14.jpg" class="col-sm-4 img-fluid" id="imge" alt="Sports Performance Training"  style="height:250px"/></figure>
+    <div class="middle">
+        <div class="texts">Sports Performance Training</div>
+      </div>
   </div>
   <div class="item">
-    <figure><img src="15.jpg" class="col-sm-4 img-fluid" alt="Nutrition Coaching" style="height:250px"/></figure>
+    <figure><img src="15.jpg" class="col-sm-4 img-fluid" id="imge" alt="Nutrition Coaching" style="height:250px"/></figure>
+    <div class="middle">
+        <div class="texts">Nutrition Coaching</div>
+      </div>
   </div>
 </div>
 </div>
