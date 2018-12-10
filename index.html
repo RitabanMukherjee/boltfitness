@@ -233,9 +233,7 @@ div.transbox {
 
 
 
-.hover08 {
-  overflow:hidden;
-}
+
 
 
 
@@ -270,7 +268,7 @@ div.transbox {
   overflow:hidden;
 }
 
-
+/*
 .middle {
   transition: .5s ease;
   opacity: 0;
@@ -301,6 +299,61 @@ div.transbox {
 .item:hover .middle {
   opacity: 1;
 }
+*/
+
+.hover07 {
+  overflow:hidden;
+  position: relative;
+}
+
+
+
+.container1 {
+  position: relative;
+ 
+}
+
+.image {
+  display: grid;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.container1:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -418,23 +471,38 @@ div.transbox {
 <!-- Container (Programs Section) -->
 <div id="programs" class="container-fluid text-center bg-grey">
 
+  
 <div class="text-center">
-<div class="hover08 column">
-  <div class="item">
-    <figure><img src="16.jpg" class="col-sm-4 img-fluid" id="imge" alt="Adult Fitness"   style="height:250px"/></figure>
-    
+<div class="hover07">
+  
+  <div class="container1 col-sm-4">
+    <figure><img src="16.jpg" class="image" id="image" alt="Adult Fitness"   style="height:250px"/></figure>
+    <div class="overlay">
+      <div class="text">Adult Fitness</div>
+    </div>
   </div>
-  <div class="item">
-    <figure><img src="14.jpg" class="col-sm-4 img-fluid" id="imge" alt="Sports Performance Training"  style="height:250px"/></figure>
-    
+  
+  
+  <div class="container1 col-sm-4">
+    <figure><img src="14.jpg" class="image" id="image" alt="Sports Performance Training"  style="height:250px"/></figure>
+    <div class="overlay">
+      <div class="text">Sports Performance Training</div>
+    </div>
   </div>
-  <div class="item">
-    <figure><img src="15.jpg" class="col-sm-4 img-fluid" id="imge" alt="Nutrition Coaching" style="height:250px"/></figure>
-    
+  
+  
+  <div class="container1 col-sm-4">
+    <figure><img src="15.jpg" class="image" id="image" alt="Nutrition Coaching" style="height:250px"/></figure>
+    <div class="overlay">
+      <div class="text">Nutrition Coaching</div>
+    </div>
   </div>
+  </div>
+
 </div>
 </div>
-</div>
+
+
 
 
 
